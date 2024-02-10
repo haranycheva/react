@@ -1,22 +1,27 @@
-import React from "react";
-import Header from "./components/Header";
-import Image from "./components/Image";
-import img from "./img/nya.jpg"
+import { Table } from 'Table';
+import './index.css'
+import { Row } from 'Row';
+import { Column } from 'Column';
 
-class App extends React.Component {
-  text = "blablabla";
-  render() {
-    return (
-      <div className="box">
-        <Header title="headerH"/>
-        <Image image={img} />
-        <input placeholder={this.text} onClick={this.onClick} />
-        <p>{5 + "m"}</p>
-      </div>
-    );
-  }
-  onClick(){
-    console.log(1)
-  }
+function App() {
+  return (
+    <>
+      <Table>
+        <Row>
+          <Column>№</Column>
+          <Column>Name</Column>
+        </Row>
+        <Row>
+          <Column>1</Column>
+          <Column>Mariia</Column>
+        </Row>
+        <Row>
+          <Column>2</Column>
+          <Column>Alex</Column>
+        </Row>
+      </Table>
+    </>
+  );
 }
-export default App
+
+export default App;

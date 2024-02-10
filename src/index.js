@@ -1,19 +1,10 @@
-import React from "react";
-import ReactDOMClient from "react-dom";
-import App from "./App";
-import "./css/style.css"
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-const app = ReactDOMClient.createRoot(document.querySelector("#root"));
-app.render(<App />);
-// ReactDOM.render(
-//   <div className="box">
-//     <input placeholder={text} onClick={() => console.log(1)} />
-//     <p>{5 + "m"}</p>
-//   </div>,
-//   document.querySelector("#root")
-// );
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <App></App>
+);
 
-// ReactDOM.render(React.createElement("input", {
-//     placeholder: "blablabla",
-//     onClick: () => console.log(1),
-// }), document.querySelector("#wrapper"))
