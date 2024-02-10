@@ -21,7 +21,7 @@ function App() {
           <Column>Alex</Column>
         </Row>
       </Table>
-      <List></List>
+      <List />
     </>
   );
 }
