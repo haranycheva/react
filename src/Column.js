@@ -1,7 +1,5 @@
-import "./Column.css"
+import "./Column.css";
 
-export function Column({children}){
-    return (
-        <td class="column">{children}</td>
-    )
+export function Column({ children }) {
+  return <td className="column">{children}</td>;
 }

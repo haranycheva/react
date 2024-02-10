@@ -1,0 +1,12 @@
+.item{
+    padding: 6px 9px 0;
+    width: 178px;
+    height: 279px;
+    background-color: beige;
+}
+
+.title{
+    margin: 5px 0;
+    font-size: 24px;
+    font-weight: 700;
+}

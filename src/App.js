@@ -1,7 +1,8 @@
-import { Table } from 'Table';
-import './index.css'
-import { Row } from 'Row';
-import { Column } from 'Column';
+import { Table } from "Table";
+import "./index.css";
+import { Row } from "Row";
+import { Column } from "Column";
+import { List } from "List";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Column>Alex</Column>
         </Row>
       </Table>
+      <List></List>
     </>
   );
 }
