@@ -3,6 +3,7 @@ import "./index.css";
 import { Row } from "Row";
 import { Column } from "Column";
 import { List } from "List";
+import { Try } from "Try";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </Row>
       </Table>
       <List />
+      <Try typeBox="error"/>
     </>
   );
 }
