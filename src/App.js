@@ -1,31 +1,30 @@
-import { Table } from "Table";
+import { Item } from "Item/Item";
 import "./index.css";
-import { Row } from "Row";
-import { Column } from "Column";
-import { List } from "List";
-import { Try } from "Try";
+import { List } from "App.styled";
+import { useState } from "react";
+import { data } from "data";
 
-function App() {
+export function App() {
+  const [shownEl, setShownEl] = useState(null);
+  function handleClick(e) {
+    if(shownEl === e.currentTarget.dataset.id){
+      setShownEl(null);
+      return
+    }
+    setShownEl(e.currentTarget.dataset.id);
+  }
   return (
-    <>
-      <Table>
-        <Row>
-          <Column>№</Column>
-          <Column>Name</Column>
-        </Row>
-        <Row>
-          <Column>1</Column>
-          <Column>Mariia</Column>
-        </Row>
-        <Row>
-          <Column>2</Column>
-          <Column>Alex</Column>
-        </Row>
-      </Table>
-      <List />
-      <Try typeBox="error"/>
-    </>
+    <List>
+      {data.map((el) => (
+        <Item
+          isShown={shownEl === el.id}
+          onClick={handleClick}
+          id={el.id}
+          key={el.id}
+          title={el.title}
+          text={el.text}
+        ></Item>
+      ))}
+    </List>
   );
 }
-
-export default App;
