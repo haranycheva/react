@@ -23,9 +23,6 @@ export const Li = styled.li`
     top: 15px;
     right: 10px;
   }
-  & > p:last-child{
-    display: ${checkIfShown("block", "none")};
-  }
 `;
 
 

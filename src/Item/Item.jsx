@@ -1,18 +1,11 @@
 import { ItemText, Li } from "./Item.styled";
 
-export function Item({ title, text, onClick, id, isShown }) {
-const isShownClass = isShown ? "shown" : "";
+export function Item({ card, handleClick, id, isShown }) {
   return (
-//     isShown ? (
-//     <ShownLi data-id={id} onClick={onClick}>
-//       <p>{title}</p>
-//       <ItemText>{text}</ItemText>
-//     </ShownLi>
-//   ) : (
-    <Li data-id={id} onClick={onClick} className={isShownClass} isShown={isShown}>
-      <p>{title}</p>
-      <ItemText>{text}</ItemText>
+    <Li data-id={id} onClick={handleClick} isShown={isShown}>
+      <p>{card.title}</p>
+      {isShown && <ItemText>{card.text}</ItemText>}
     </Li>
-//   );
+
 )
 }

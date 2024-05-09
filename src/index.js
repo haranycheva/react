@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from 'App';
+import { Mult } from 'Mult';
+import { Theme } from 'Theme/Theme';
+import "./index.css";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-  <App></App>
+  <Theme/>
+  {/* <Mult/> */}
   </>
   
 );
